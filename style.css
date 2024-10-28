@@ -1,1 +1,18 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
+#css-zen-garden {
+    display: flex;
+    background: url(/images/Frame.jpg) no-repeat;
+    background-size: auto, contain;
+    background-position: center top; 
+}
+
+#zen-intro {
+
+}
+
+.intro {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+    padding: 5em
+}
