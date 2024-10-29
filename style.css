@@ -1,18 +1,40 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
+
 #css-zen-garden {
     display: flex;
     background: url(/images/Frame.jpg) no-repeat;
     background-size: auto, contain;
     background-position: center top; 
+    background-color: black;
 }
 
-#zen-intro {
-
-}
-
-.intro {
+#zen-intro{
     display: flex;
-    flex-flow: wrap;
-    justify-content: flex-end;
-    padding: 5em
+    flex-flow: column wrap;
+    align-items: flex-end;
+    padding-right: 20vw;
+    padding-top: 5vh;
+    padding-bottom: 0.7rem;
 }
+
+.summary {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    border: red solid 3px;
+    background-color: black;
+    padding: 0.5rem;
+    max-width: 30ch;
+
+}
+
+
+ [role=banner]  {
+    display: inline-block;
+    text-align: center;
+    color: white;
+    border: red solid 3px;
+    background-color: black;
+    padding: 0.5rem;
+}
+
