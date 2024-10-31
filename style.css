@@ -3,6 +3,19 @@
     color: white;
 }
 
+a:hover {
+    color: gold;
+}
+
+a:link {
+    color: rgb(247, 110, 110);
+}
+
+a:visited {
+    color: gold;
+    text-decoration: none;
+}
+
 h1 { 
     font-size: 2rem;
     margin: 0.5rem;
@@ -53,14 +66,12 @@ p {
     text-align: left;
     background-color: black;
     border: red solid 3px;
-    padding: 0.5rem;
     max-width: 20ch;
     position: absolute;
-    margin-right: 40vw;
-    margin-top: 20vh;
+    margin-left: 40vw;
+    margin-top: 30vh;
+
 }
-
-
 
 .summary {
     display: inline-block;
@@ -84,6 +95,10 @@ p {
     text-align: center;
     border: red solid 3px;
     background-color: black;
-    margin: 2rem
+    margin: 2rem;
+ }
+
+ [href] {
+    
  }
 
