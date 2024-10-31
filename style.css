@@ -3,7 +3,7 @@
     color: white;
 }
 
-a:hover {
+[href]:hover {
     color: gold;
 }
 
@@ -11,18 +11,33 @@ a:link {
     color: rgb(247, 110, 110);
 }
 
-a:visited {
+a:active {
     color: gold;
-    text-decoration: none;
 }
 
-h1 { 
-    font-size: 2rem;
+a:visited {
+    color: crimson;
+}
+
+p::first-letter {
+    text-wrap: wrap;
+}
+
+h1 ~ h2 {
+    font-size: 1.2rem;
     margin: 0.5rem;
 }
 
-h2 {
-    font-size: 1.5rem;
+div p {
+    text-align: left;
+}
+
+div + h3 {
+    text-align: left;
+}
+
+div > h1 { 
+    font-size: 2rem;
     margin: 0.5rem;
 }
 
@@ -36,8 +51,12 @@ p {
     margin: 0.5rem;
 }
 
+footer {
+    
+}
+
 #zen-summary {
-    margin-top: 1rem;
+    margin-top: 0.2rem;
 }
 
 #css-zen-garden {
@@ -46,13 +65,14 @@ p {
     background-size: auto, contain;
     background-position: center top; 
     background-color: black;
+    justify-content: center;
 }
 
 #zen-intro {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-end;
-    margin-left: 60vw;
+    margin-left: 30vw;
     padding: 0.5rem;
 }
 
@@ -61,36 +81,48 @@ p {
     flex-flow: wrap;
 }
 
-.preamble {
+.sidebar {
+    position: absolute;
+    margin-top: -20vh;
+}
+
+.intro {
+    display: flex;
+    padding: 0.5rem;
+}
+
+div.preamble {
     display: inline-block;
     text-align: left;
     background-color: black;
     border: red solid 3px;
-    max-width: 20ch;
+    max-width: 18ch;
     position: absolute;
-    margin-left: 40vw;
+    margin-right: 32vw;
     margin-top: 30vh;
-
 }
 
-.summary {
+.intro .summary {
     display: inline-block;
     text-align: center;
     border: red solid 3px;
     background-color: black;
     padding: 0.5rem;
-    max-width: 30ch;
+    max-width: 35ch;
 }
 
 .main.supporting, .participation, .requirments {
     display: flex;
     flex-flow: column wrap;
-    align-content: center;
-    max-width: 25ch; 
+    align-items: center;
+    max-width: 30ch; 
+    position: relative;
+    margin: auto;
+    margin-top: -30vh;
+    
 }
 
-
- [role=banner], [role=article]  {
+ [role="banner"], [role="article"]  {
     display: inline-block;
     text-align: center;
     border: red solid 3px;
@@ -99,6 +131,29 @@ p {
  }
 
  [href] {
-    
+    text-decoration: none;
+    transition: color 250ms ease;
  }
 
+ a[href^="http"] {
+    text-decoration: none;
+    transition: color 250ms ease;
+    color: crimson;
+ }
+
+ a[href$="page1"] {
+    text-decoration: underline;
+ }
+
+ a[href*="www.mezzoblue"] {
+    text-decoration: underline;
+ }
+
+ [id|="zen"] {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ }
+
+ [class~=archives] {
+    padding: 0rem;
+ }
+ 
