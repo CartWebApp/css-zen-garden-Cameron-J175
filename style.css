@@ -28,6 +28,42 @@ h1 ~ h2 {
     margin: 0.5rem;
 }
 
+h3:empty {
+    font-size: 1.25rem;
+    margin: 0.5rem;
+}
+
+h3:only-of-type {
+    padding-left: 0.5rem;
+}
+
+div:only-child {
+    background-color: black;
+    border: red solid 3px;
+
+}
+
+p:first-letter {
+    font-size: 0.85rem;
+}
+
+p:first-line {
+
+}
+
+
+
+li::before {
+    content: "<"
+}
+ li::after {
+    content: ">"
+ }
+
+ul {
+    list-style-type: none;
+}
+
 div p {
     text-align: left;
 }
@@ -38,11 +74,6 @@ div + h3 {
 
 div > h1 { 
     font-size: 2rem;
-    margin: 0.5rem;
-}
-
-h3 {
-    font-size: 1.25rem;
     margin: 0.5rem;
 }
 
@@ -98,7 +129,7 @@ div.preamble {
     border: red solid 3px;
     max-width: 18ch;
     position: absolute;
-    margin-right: 32vw;
+    margin-right: 30vw;
     margin-top: 30vh;
 }
 
@@ -109,6 +140,13 @@ div.preamble {
     background-color: black;
     padding: 0.5rem;
     max-width: 35ch;
+}
+
+.benefits {
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+
 }
 
 .main.supporting, .participation, .requirments {
@@ -142,7 +180,7 @@ div.preamble {
  }
 
  a[href$="page1"] {
-    text-decoration: underline;
+    
  }
 
  a[href*="www.mezzoblue"] {
