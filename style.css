@@ -37,28 +37,47 @@ h3:only-of-type {
     padding-left: 0.5rem;
 }
 
-div:only-child {
-    background-color: black;
-    border: red solid 3px;
-
+a:only-child {
+    color: crimson;
 }
 
-p:first-letter {
-    font-size: 0.85rem;
+h1::first-letter {
+    font-size: 2rem;
 }
 
-p:first-line {
-
+p::first-line {
+    font-weight: bold;
 }
 
-
+:not(p) {
+    font-weight: bold;
+}
 
 li::before {
     content: "<"
 }
- li::after {
+
+li::after {
     content: ">"
  }
+
+ :root {
+    display: flex;
+    background: url(/images/Frame.jpg) no-repeat;
+    background-size: auto, contain;
+    background-position: center top; 
+    background-color: black;
+    justify-content: center;
+}
+
+::selection {
+    color: black;
+    background-color: white
+}
+
+input:focus {
+    background-color: rgb(245, 153, 153); 
+}
 
 ul {
     list-style-type: none;
@@ -82,21 +101,24 @@ p {
     margin: 0.5rem;
 }
 
-footer {
-    
+.main div:nth-last-of-type(2) {
+    margin-top: 0rem;
+}
+
+.main div:last-of-type{
+    margin-top: 0rem;
+}
+
+.main div:first-of-type{
+    margin-bottom: 0rem;
+}
+
+footer > a:nth-last-child(4) {
+    text-decoration: underline;
 }
 
 #zen-summary {
     margin-top: 0.2rem;
-}
-
-#css-zen-garden {
-    display: flex;
-    background: url(/images/Frame.jpg) no-repeat;
-    background-size: auto, contain;
-    background-position: center top; 
-    background-color: black;
-    justify-content: center;
 }
 
 #zen-intro {
@@ -110,11 +132,43 @@ footer {
 #zen-preamble {
     display: flex;
     flex-flow: wrap;
+    margin-right: 31.6vw;
 }
 
-.sidebar {
+.wrapper div:first-child {
     position: absolute;
-    margin-top: -20vh;
+    margin: -40vh auto auto 32vw
+}   
+    
+.wrapper div:nth-last-child(2) {
+    position: absolute;
+    margin: -50vh auto auto 10.4vw;
+}
+
+.wrapper div:nth-of-type(3) {
+    position: absolute;
+    margin:-35vh auto auto 7.6vw;
+}
+
+.zen-resources {
+    display: inline-block;
+    background-color: black;
+    border: red solid 3px;
+    padding-right: 0.5rem;
+}
+
+.design-archives {
+    display: inline-block;
+    background-color: black;
+    border: red solid 3px;
+    padding-right: 0.5rem;
+}
+
+.design-selection {
+    display: inline-block;
+    background-color: black;
+    border: red solid 3px;
+    padding-right: 0.5rem;
 }
 
 .intro {
@@ -122,7 +176,7 @@ footer {
     padding: 0.5rem;
 }
 
-div.preamble {
+.intro div:last-child {
     display: inline-block;
     text-align: left;
     background-color: black;
@@ -142,14 +196,7 @@ div.preamble {
     max-width: 35ch;
 }
 
-.benefits {
-    display: flex;
-    flex-flow: wrap;
-    align-items: center;
-
-}
-
-.main.supporting, .participation, .requirments {
+.main.supporting, .participation, .requirments, .benefits {
     display: flex;
     flex-flow: column wrap;
     align-items: center;
